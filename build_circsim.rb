@@ -170,7 +170,7 @@ if config[:build] or not File.exists?(config[:input])
   puts "Building Circsim.  This may take a minute or two..."
   
   FileUtils.rm_rf config[:input]
-  `#{build_bin} #{config[:app_name]} -cr --languages=en --mode=#{config[:mode]}`
+  `#{build_bin} #{config[:app_name]} -r --languages=en --mode=#{config[:mode]}`
 end
 
 built_path = Dir[File.join(config[:input], 'static', config[:app_name])]
