@@ -3520,7 +3520,7 @@ ul#grid-rows li a:hover {
   margin-top: 4px;
   margin-left: 12px;
   width: 330px;
-  top: 50%;
+  /* top: 50%; */
   height: 24px;
   font-weight: bold;
   font-size: 18px;
