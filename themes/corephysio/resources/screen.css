@@ -3583,10 +3583,10 @@ ul#grid-rows li a:hover {
   position: absolute;
   margin-top: -9px;
   right: 10px;
-  width: 252px;
+  width: 400px;
   top: 50%;
   height: 18px;
-  text-align: center;
+  text-align: right;
 }
 
 /* line 1, ../src/views/_title.scss */
