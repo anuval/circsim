@@ -123,6 +123,12 @@ div {
   font-size: 14px;
 }
 
+#prev-button {
+	float: right;
+	margin-top: 7px;
+	margin-right: 9px;
+}
+
 /* line 50, ../src/partials/_base.scss */
 #next-button {
   float: right;

@@ -82,6 +82,7 @@ procedures.each do |procedure|
     key: [#{procedure_csv[:key]}],
     initialVariable: #{procedure_csv[:initial_variable]},
     initialVariableDirection: #{procedure_csv[:initial_variable_direction]},
+    initialVariableSummary: "#{procedure_csv[:initial_variable_summary]}",
     answerKeys: #{answerkey_guids},
     relationshipEvaluations: [{
       equation: [4, 2, 3],
