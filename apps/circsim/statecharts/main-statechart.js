@@ -566,7 +566,7 @@ Circsim.mixin({
               enterState: function() {
                 Circsim.messageController.set('title', "Procedure Specific Evaluations");
                 Circsim.messageController.set('content', "Your predictions will now be evaluated for errors specific to this procedure.  When you are ready, please click Evalute My Answers.");
-                Circsim.nextPromptController.set('content', 'Evalute My Answers.');
+                Circsim.nextPromptController.set('content', 'Evalute My Answers');
               },
               
               next: function() {
@@ -737,9 +737,18 @@ Circsim.mixin({
 
       "ProcedureComplete": SC.State.design({
         enterState: function(){
+          var procedure = Circsim.procedureController.get("content");
+          var allCells = Circsim.cellsController.get('allCells');
+
           Circsim.procedureController.get('content').set('isComplete', true);
-          var title = Circsim.procedureController.get('content').get('title');
-          Circsim.messageController.set('content', "You have completed the "+title+" procedure!  Click on another procedure from the list to the left to continue Circsim.");
+          
+          CoreCircsim.removeCorrectAnswers(allCells);
+          CoreCircsim.removeValues(allCells);
+          // CoreCircsim.displayValues(allCells);
+          
+          Circsim.messageController.set("title", "Summary");
+          Circsim.messageController.set("content", procedure.get('procedureSummary'));
+          Circsim.nextPromptController.set("content", "Finish");
         },
         
         exitState: function(){

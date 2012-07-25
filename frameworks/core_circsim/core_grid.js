@@ -90,10 +90,22 @@ SC.mixin(CoreCircsim, {
     return cells;
   },
   
+  displayValues: function(cells){
+      cells.forEach(function(cell){
+          cell.set('displayValue', true);
+      });
+  },
+  
   displayCorrectAnswers: function(cells){
     cells.forEach(function(cell) {
       cell.set('displayCorrectAnswer', true);
     });
+  },
+  
+  removeValues: function(cells){
+      cells.forEach(function(cell){
+          cell.set('displayValue', false);
+      });
   },
   
   removeCorrectAnswers: function(cells){
