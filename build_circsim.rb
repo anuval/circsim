@@ -71,6 +71,10 @@ procedures.each do |procedure|
   procedure_csv = CSV.table("#{procedure}/procedure.csv")
   procedure_csv = procedure_csv[0]
 
+  procedure_csv[:procedure_summary].gsub!('',"<P>")
+
+  puts procedure_csv[:procedure_summary]
+
   template = %Q({
     guid: "#{procedure}",
     title: "#{procedure_csv[:title]}",
@@ -82,6 +86,8 @@ procedures.each do |procedure|
     key: [#{procedure_csv[:key]}],
     initialVariable: #{procedure_csv[:initial_variable]},
     initialVariableDirection: #{procedure_csv[:initial_variable_direction]},
+    initialVariableSummary: "#{procedure_csv[:initial_variable_summary]}",
+    procedureSummary: "#{procedure_csv[:procedure_summary]}",
     answerKeys: #{answerkey_guids},
     relationshipEvaluations: [{
       equation: [4, 2, 3],

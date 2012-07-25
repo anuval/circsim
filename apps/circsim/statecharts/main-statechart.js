@@ -75,8 +75,12 @@ Circsim.mixin({
               Circsim.contentController.set('contentDisplay', 'Circsim.contentViews.procedureView');
               Circsim.messageController.set("title", "Primary Variable");
               Circsim.messageController.set("content", "Please use the menu to the left to select the primary variable that is changed in this procedure. When you have made your decision, click the button above to submit your choice.");            
-              Circsim.set('pvViewDisplay', "Circsim.PVView");
               Circsim.nextPromptController.set('content', 'Submit Primary Variable');
+              Circsim.set('pvViewDisplay', "Circsim.PVView");
+            },
+            
+            prev: function() {
+                
             },
             
             next: function() {  
@@ -240,11 +244,7 @@ Circsim.mixin({
               var procedure = Circsim.procedureController.get('content');
               var cells = Circsim.cellsController.get('allCells');
               CoreCircsim.setPVToCorrect(procedure, cells);
-              
-              
               Circsim.nextPromptController.set('content', 'Next');  
-              
-              
             },
             
             exitState: function(){
@@ -253,11 +253,7 @@ Circsim.mixin({
             },
 
             next: function() {
-              this.completeRestOfColumn();
-            },
-            
-            completeRestOfColumn: function(){
-              this.gotoState("ColumnInput");
+              this.gotoState("IVSummary");
             }
           }),
           
@@ -270,7 +266,6 @@ Circsim.mixin({
               var procedure = Circsim.procedureController.get('content');
               var cells = Circsim.cellsController.get('allCells');
               CoreCircsim.setPVToCorrect(procedure, cells);
-                          
               Circsim.nextPromptController.set('content', 'Next');
             },
 
@@ -280,13 +275,27 @@ Circsim.mixin({
             },
             
             next: function() {
-              this.completeRestOfColumn();
-            },
-            
-            completeRestOfColumn: function(){
-              this.gotoState("ColumnInput");
-            }          
+              this.gotoState("IVSummary");
+            }        
+          }),
+          
+          "IVSummary": SC.State.design({
+              enterState: function() {
+                  var procedure = Circsim.procedureController.get("content");
+                  Circsim.messageController.set("content", procedure.get('initialVariableSummary'));
+              },
+          
+              exitState: function() {
+                  Circsim.messageController.set("content", "");
+              },
+          
+              next: function()
+              {
+                  this.gotoState("ColumnInput");
+              }
           })
+          
+
         }),
         
         "ColumnInput": SC.State.design({
@@ -557,7 +566,7 @@ Circsim.mixin({
               enterState: function() {
                 Circsim.messageController.set('title', "Procedure Specific Evaluations");
                 Circsim.messageController.set('content', "Your predictions will now be evaluated for errors specific to this procedure.  When you are ready, please click Evalute My Answers.");
-                Circsim.nextPromptController.set('content', 'Evalute My Answers.');
+                Circsim.nextPromptController.set('content', 'Evalute My Answers');
               },
               
               next: function() {
@@ -600,7 +609,8 @@ Circsim.mixin({
                   CoreCircsim.displayCorrectAnswers(currentCells); // Then display the correct ones.
                                   
                   // Setting messages array
-                  Circsim.messagesController.set('content', answerKeys);                
+                  Circsim.messagesController.set('content', answerKeys);
+                  Circsim.messagesController.set('index', 0);
                 }
               },
               
@@ -615,6 +625,7 @@ Circsim.mixin({
               enterState: function() {
                 
                 var answerKey = Circsim.messagesController.get('content'),
+                    answerIndex = Circsim.messagesController.get('index'),
                     comment, 
                     category,
                     highlights,
@@ -623,7 +634,14 @@ Circsim.mixin({
                 
                 // Do all display stuff in here.
                 if (SC.compare(answerKey, []) !== 0 && SC.compare(answerKey, null) !== 0) {
-                  answerKey = answerKey.shiftObject();
+                  answerKey = answerKey.get(answerIndex);
+                  
+                  if(answerIndex > 0) {
+                      Circsim.prevPromptController.set('isVisible', YES);
+                  }
+                  else {
+                      Circsim.prevPromptController.set('isVisible', NO);
+                  }
                   
                   // Setup view here.
                   comment    = answerKey.get('comment');
@@ -668,11 +686,21 @@ Circsim.mixin({
                 
                 //
                 CoreCircsim.removeCorrectAnswers(Circsim.cellsController.get('allCells'));
+                
+                Circsim.prevPromptController.set('isVisible', NO);
+              },
+              
+              prev: function(){
+                  var currentIndex = Circsim.messagesController.get('index');
+                  Circsim.messagesController.set('index', currentIndex - 1);
+                  this.gotoState("DisplayProcedureSpecificComment");
               },
               
               next: function(){
+                var currentIndex = Circsim.messagesController.get('index');
                 var commentsRemaining = Circsim.messagesController.get('content'); 
-                if (commentsRemaining && commentsRemaining.length > 0) {
+                if (currentIndex + 1 < commentsRemaining.length) {
+                  Circsim.messagesController.set('index', currentIndex + 1);
                   this.gotoState("DisplayProcedureSpecificComment");
                 } else {
                   this.gotoState("CheckForRemainingColumns");
@@ -709,9 +737,18 @@ Circsim.mixin({
 
       "ProcedureComplete": SC.State.design({
         enterState: function(){
+          var procedure = Circsim.procedureController.get("content");
+          var allCells = Circsim.cellsController.get('allCells');
+
           Circsim.procedureController.get('content').set('isComplete', true);
-          var title = Circsim.procedureController.get('content').get('title');
-          Circsim.messageController.set('content', "You have completed the "+title+" procedure!  Click on another procedure from the list to the left to continue Circsim.");
+          
+          CoreCircsim.removeCorrectAnswers(allCells);
+          CoreCircsim.removeValues(allCells);
+          // CoreCircsim.displayValues(allCells);
+          
+          Circsim.messageController.set("title", "Summary");
+          Circsim.messageController.set("content", procedure.get('procedureSummary'));
+          Circsim.nextPromptController.set("content", "Finish");
         },
         
         exitState: function(){

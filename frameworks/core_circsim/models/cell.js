@@ -7,7 +7,8 @@ CoreCircsim.Cell = SC.Record.extend({
   correctAnswer: SC.Record.attr(Number),
   displayCorrectAnswer: SC.Record.attr(Boolean),
   highlightRECorrect: SC.Record.attr(Boolean, {defaultValue: false}), 
-  highlightREIncorrect: SC.Record.attr(Boolean, {defaultValue: false}), 
+  highlightREIncorrect: SC.Record.attr(Boolean, {defaultValue: false}),
+  displayValue: SC.Record.attr(Boolean, {defaultValue: true}),
   
   column: SC.Record.toOne('CoreCircsim.Column', {
     isMaster: NO

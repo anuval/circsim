@@ -14,12 +14,25 @@ Circsim.contentViews.procedureView = SC.View.design({
     layout: {top: 20, right: 10, left: 10, height: 40},
     tagName: "div",
     layerId: "procedure-toolbar",
-    childViews: "procedureTitle nextButton".w(),
+    childViews: "procedureTitle nextButton prevButton".w(),
     procedureTitle: SC.LabelView.design({
       layout: {top: 0, right: 10, left: 10, height: 20, centerY: 0},
       tagName: "h3",
       layerId: "procedure-title",
       valueBinding: "Circsim.procedureController.title"
+    }),
+    prevButton: SC.ButtonView.design({
+      useStaticLayout: YES,
+      layerId: "prev-button",
+      classNames: 'btn',
+      titleBinding: "Circsim.prevPromptController.content",
+      isVisibleBinding: "Circsim.prevPromptController.isVisible",
+      target: "Circsim.statechart",
+      action: "prev",
+      render: function(context) {
+        var title = this.get('title');
+        context.push(title);
+      }   
     }),
     nextButton: SC.ButtonView.design({
       useStaticLayout: YES, 

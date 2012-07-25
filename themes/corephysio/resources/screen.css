@@ -123,6 +123,12 @@ div {
   font-size: 14px;
 }
 
+#prev-button {
+	float: right;
+	margin-top: 7px;
+	margin-right: 9px;
+}
+
 /* line 50, ../src/partials/_base.scss */
 #next-button {
   float: right;
@@ -3583,10 +3589,10 @@ ul#grid-rows li a:hover {
   position: absolute;
   margin-top: -9px;
   right: 10px;
-  width: 252px;
+  width: 400px;
   top: 50%;
   height: 18px;
-  text-align: center;
+  text-align: right;
 }
 
 /* line 1, ../src/views/_title.scss */
