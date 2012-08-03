@@ -45,7 +45,7 @@ SC.mixin(CoreCircsim, {
     // I think the signature should be (answerKeys, studentInput)
     // This would be best because when I refactor the model layer, I will only be pulling out column specific answer keys anyway.  But that shouldn't matter here. 
     var answerKeys = procedure.get('answerKeys').filterProperty('column', columnNumber);
-    
+
     // Validations
     var numberOfCells = procedure.get('rows').length;
     if (numberOfCells != studentInput.length) return [];
@@ -64,13 +64,15 @@ SC.mixin(CoreCircsim, {
       var key = answerKey.get('cellValues');
       var indices = answerKey.get('cells');
       var student = getStudentInput(indices, studentInput);
-      var isCorrect = answerKey.get('isCorrect');
+      var matchType = answerKey.get('match');
       // Everything up to this point is just getting the correct values to compare, so this is the method that really needs to change.
       // This bascially just says if it is not a match, then remove it from the returned answer keys
-      if (isCorrect) {
+      if (matchType === "ALL") {
         if (CoreCircsim.compareStudentInputWithKey(key, true, student) === false) keyMatches.removeObject(answerKey);
-      } else if(!isCorrect) {
+      } else if(matchType === "ANY") {
         if (CoreCircsim.compareStudentInputWithKey(key, false, student) === false) keyMatches.removeObject(answerKey);
+      } else {
+          SC.error("CoreCircsim.evaluateProcedureSpecficErrors: Bad match type");
       }
     });
 
@@ -78,9 +80,10 @@ SC.mixin(CoreCircsim, {
   },
 
   // This returns true or false based on whether it's a match
-  compareStudentInputWithKey: function(key, isCorrect, student) {
+  compareStudentInputWithKey: function(key, match, student) {
     var returnVal;
-    if (isCorrect) {
+    if (match) {
+      // match == true: match all of the conditions
       returnVal = true;
       for (var i = 0; i < key.length; i++) {
         var k = key[i];
@@ -109,6 +112,7 @@ SC.mixin(CoreCircsim, {
       }
       return returnVal;
     } else {
+        // match any of the conditions
       returnVal = false;
       for (var i = 0; i < key.length; i++) {
         var k = key[i];
