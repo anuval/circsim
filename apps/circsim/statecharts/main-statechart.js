@@ -444,6 +444,11 @@ Circsim.mixin({
                   var cell = Circsim.columnController.get('content').get('cells').objectAt(i);
                   cell.set('isEnabled', true);
                 });
+                
+                // Highlight the group of cells being looked at.
+                var cells = Circsim.columnController.get('content').get('cells');
+                var relationshipIndices = re['equation'];
+                CoreCircsim.highlightIncorrectRelationships(cells, relationshipIndices);
               },
               
               exitState: function(){

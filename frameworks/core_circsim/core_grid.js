@@ -123,12 +123,14 @@ SC.mixin(CoreCircsim, {
 
   highlightCorrectRelationships: function(cells, indices) {
     indices.forEach(function(i) {
-      cells.objectAt(i).set('highlightRECorrect', true)
+      cells.objectAt(i).set('highlightRECorrect', true);
+      cells.objectAt(i).set('highlightREIncorrect', false);
     });
   },
 
   highlightIncorrectRelationships: function(cells, indices) {
     indices.forEach(function(i) {
+      cells.objectAt(i).set('highlightRECorrect', false);
       cells.objectAt(i).set('highlightREIncorrect', true)
     });
   },
