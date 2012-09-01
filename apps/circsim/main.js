@@ -2,17 +2,27 @@
 
 Circsim.main = function main() {
 
-  // Instantiate views
-  Circsim.getPath('mainPage.mainPane').append();
+    // Uncomment the desired messaging level (viewable in the browser's
+    // JavaScript console.
+    SC.Logger.logOutputLevel = SC.LOGGER_LEVEL_DEBUG;
+    // SC.Logger.logOutputLevel = SC.LOGGER_LEVEL_INFO;
+    // SC.Logger.logOutputLevel = SC.LOGGER_LEVEL_WARN;
+    // SC.Logger.logOutputLevel = SC.LOGGER_LEVEL_ERROR;
 
-  // Set content of proceduresController
-  Circsim.proceduresController.set('content', CoreCircsim.store.find(CoreCircsim.Procedure));
+    // Load procedures from server
+    CoreCircsim.populateProcedures();
 
-  // Initialize Statechart
-  Circsim.statechart.initStatechart();  
-  
+    // Instantiate views
+    Circsim.getPath('mainPage.mainPane').append();
+
+    // Set content of proceduresController
+    Circsim.proceduresController.set('content', CoreCircsim.store.find(CoreCircsim.Procedure));
+
+    // Initialize Statechart
+    Circsim.statechart.initStatechart();
+
 };
 
 function main() {
-  Circsim.main();
+    Circsim.main();
 }
