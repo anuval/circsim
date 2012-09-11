@@ -35,6 +35,8 @@ SC.mixin(CoreCircsim, {
         var hasProcedures = true;
         var procedureNumber = 1;
 
+        var fileRequest;
+
         // used as a part of creating the ID for the procedure record
         var proceduresMultiplier = 1000;
 
