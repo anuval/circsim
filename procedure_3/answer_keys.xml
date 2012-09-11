@@ -1,0 +1,554 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Anthony Nuval</Author>
+  <LastAuthor>Anthony Nuval</LastAuthor>
+  <Created>2012-09-05T17:50:55Z</Created>
+  <LastSaved>2012-09-05T18:50:30Z</LastSaved>
+  <Version>14.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11560</WindowHeight>
+  <WindowWidth>25280</WindowWidth>
+  <WindowTopX>240</WindowTopX>
+  <WindowTopY>240</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s17">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s18">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="13" ss:ExpandedRowCount="47" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="60"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="35"/>
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="273"/>
+   <Column ss:StyleID="s18" ss:AutoFitWidth="0" ss:Width="25" ss:Span="1"/>
+   <Column ss:Index="6" ss:StyleID="s18" ss:AutoFitWidth="0" ss:Width="45"/>
+   <Column ss:StyleID="s18" ss:AutoFitWidth="0" ss:Width="19"/>
+   <Column ss:StyleID="s18" ss:AutoFitWidth="0" ss:Width="21" ss:Span="1"/>
+   <Column ss:Index="10" ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="28"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="21" ss:Span="1"/>
+   <Column ss:Index="13" ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="31"/>
+   <Row ss:Height="30">
+    <Cell><Data ss:Type="String">Category</Data></Cell>
+    <Cell><Data ss:Type="String">Column</Data></Cell>
+    <Cell><Data ss:Type="String">Comment</Data></Cell>
+    <Cell><Data ss:Type="String">Correct</Data></Cell>
+    <Cell><Data ss:Type="String">Match</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">High-lights</Data></Cell>
+    <Cell><Data ss:Type="String">IS</Data></Cell>
+    <Cell><Data ss:Type="String">CVP</Data></Cell>
+    <Cell><Data ss:Type="String">SV</Data></Cell>
+    <Cell><Data ss:Type="String">HR</Data></Cell>
+    <Cell><Data ss:Type="String">CO</Data></Cell>
+    <Cell><Data ss:Type="String">Ra</Data></Cell>
+    <Cell><Data ss:Type="String">MAP</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Right!  HR and Ra  are both controlled by the nervous system (they are neural variables).  By definition, the DR interval occurs BEFORE any changes in neural firing occurs.  So, there are no changes to these two variables.</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">3,5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Well, you are half right.  HR is determined by neural signals delivered to the SA node.  Since DR is the period when there are not yet changes to the neural signals there will be no change in HR.  However, Ra is also determined by neural signals and it too will be unchanged.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">3,5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">3</Data></Cell>
+   </Row>
+   <Row ss:Height="105">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Well, you are half right.  Ra is determined by neural signals delivered to the arteriolar smooth muscle.  Since DR is the period when there are not yet changes to the neural signals there will be no change in Ra.  However, HR is also determined by neural signals (delivered to the SA node) and it too will be unchanged.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">3,5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">No!  HR and Ra  are both controlled by the nervous system (they are neural variables).  By definition, the DR interval occurs BEFORE any changes in neural firing occurs.  So, there are no changes to these two variables.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">3,5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">3</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell><Data ss:Type="String">IS to SV</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Correct.  SV is determined first by pre-load or filling and then by IS.  With IS reduced to 50% of its normal value  by the MI, SV will also be reduced.  </Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">0,2</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell><Data ss:Type="String">IS to SV</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">No.  SV is determined by first pre-load or filling and then by IS.  With IS reduced to 50% of its normal value  by the MI, SV will also be reduced.  </Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,2</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell><Data ss:Type="String">SV to CO</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Right, if SV is decreased (and HR does not change) then CO must also decrease.  Remember, CO=SV x HR.</Data></Cell>
+    <Cell><Data ss:Type="String">yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">2,4</Data></Cell>
+    <Cell ss:Index="11"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell><Data ss:Type="String">SV to CO</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">No, if SV is decreased (and HR does not change) then CO must also decrease.  Remember, CO=SV x HR.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">2,4</Data></Cell>
+    <Cell ss:Index="11"><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">CO to CVP</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Correct.  When CO decreases then CVP will increase.  With less blood being translocated from the venous to the arterial compartment, there is more blood in the central venous compartment.  This means that CVP increases.</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">1,4</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">CO to CVP</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">No,  When CO decreases then CVP will increase.  With less blood being translocated from the venous to the arterial compartment, there is more blood in the central venous compartment.  This means that CVP increases.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">1,4</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell><Data ss:Type="String">CO to MAP</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">OK, with CO decreased, MAP must also be down.  Remember, MAP = CO x Ra.</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">4,6</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell><Data ss:Type="String">CO to MAP</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">No, with CO decreased, MAP must also be down.  Remember, MAP = CO x Ra.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">4,6</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Right, with MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in IS, HR, and Ra.  The increase in IS means that the remaining ventricular myocytes contract more strongly at any degree of pre-load (filling).</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="105">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">With MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in HR, and Ra. However, there is also increase in IS.  This means that the remaining ventricular myocytes contract more strongly at any degree of pre-load (filling).</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Not quite.  With MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in IS and Ra. However, there is also increase in HR.  </Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">With MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in IS and HR. However, there is also increase in Ra.  </Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">With MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in all of the variables controlled by the nervous system (IS, HR, and Ra).  </Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">With MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in all of the variables controlled by the nervous system (IS, HR, and Ra).  </Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">With MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in all of the variables controlled by the nervous system (IS, HR, and Ra).  </Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">With MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in all of the variables controlled by the nervous system (IS, HR, and Ra).  </Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">No,  with MAP decreased in DR the baroreceptor reflex will increase the sympathetic firing to the heart and arterioles.  As a result there will be an increase in IS, HR, and Ra.  The increase in IS means that the remaining ventricular myocytes contract more strongly at any degree of pre-load (filling).</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell><Data ss:Type="String">HR to CO</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Correct.  The reflex increase in HR results in an increase in CO.</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">10,11</Data></Cell>
+    <Cell ss:Index="11"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HR to CO</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">No, the reflex increase in HR causes an increase in CO.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">10,11</Data></Cell>
+    <Cell ss:Index="11"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell><Data ss:Type="String">CO to CVP</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">OK, the increase in CO causes CVP to decrease as more blood is transferred from the venous compartment to the arterial compartment.</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">1,4</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell><Data ss:Type="String">CO to CVP</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">No, the increase in CO causes a decrease in CVP.  When CO changes &quot;first&quot; it causes an opposite change in CVP.  (Note that when CVP changes first, when preload changes, it causes the same change in CO.)</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">1,4</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell><Data ss:Type="String">CVP to SV</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Yes, with CVP decreased (that is to say, with preload down) there will be a decrease in SV.  Note that the reflex increase in IS that occurred keeps SV from falling proportionately as much as CVP fell.</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">1,2</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">CVP to SV</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">No.  CVP is the preload for the ventricles.  With CVP down the filling of the ventricles will be down and hence SV must decrease.  Note that the reflex increase in IS that occurred keeps SV from falling proportionately as much as CVP fell.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">1,2</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Right.  With Ra and CO both increased there will be an increase in MAP.  You can also reason that the response of the baroreceptor reflex to the fall in MAP in DR will cause MAP to increase towards its normal value.</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">No, with Ra and CO both increased there will be an increase in MAP.  You can also reason that the response of the baroreceptor reflex to the fall in MAP in DR will cause MAP to increase towards its normal value.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Correct, the neurally controlled variables, HR and Ra, are increased by the baroreceptor reflex (RR) to help restore MAP.  However, IS is still decreased from its normal value value since the reflex can not fully overcome the effect of the MI (decrease in the number of functioning ventricular myocytes).</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Not quite correct.  The neurally controlled variables, IS, HR and Ra, are increased by the baroreceptor reflex (RR) to help restore MAP.  However, IS is still decreased from its controlled value since the reflex can not fully overcome the effect of the patient's MI.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Not quite correct.  The neurally controlled variables, IS and HR  are increased by the baroreceptor reflex (RR) to help restore MAP.  However, Ra is also a neural controlled variable,  and it too is increased by the baroreceptor reflex.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Not quite correct.  The neurally controlled variables, IS and Ra  are increased by the baroreceptor reflex to help restore MAP.  However, Ra is also a neural controlled variable and it too is increased by the barorefceptor reflex.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, the neurally controlled variables, HR and Ra, are increased by the baroreceptor reflex (RR) to help restore MAP.  However, IS is still decreased from its normal value value since the reflex can not fully overcome the effect of the MI (decrease in the number of functioning ventricular myocytes).</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, the neurally controlled variables, HR and Ra, are increased by the baroreceptor reflex (RR) to help restore MAP.  However, IS is still decreased from its normal value value since the reflex can not fully overcome the effect of the MI (decrease in the number of functioning ventricular myocytes).</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, the neurally controlled variables, HR and Ra, are increased by the baroreceptor reflex (RR) to help restore MAP.  However, IS is still decreased from its normal value value since the reflex can not fully overcome the effect of the MI (decrease in the number of functioning ventricular myocytes).</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell><Data ss:Type="String">Neural variables</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, the neurally controlled variables, HR and Ra, are increased by the baroreceptor reflex (RR) to help restore MAP.  However, IS is still decreased from its normal value value since the reflex can not fully overcome the effect of the MI (decrease in the number of functioning ventricular myocytes).</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">0,3,5</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell><Data ss:Type="String">HR to CO</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Correct.  The reflex increase in HR increases CO, but not enough to overcome the decrease in CO caused by the death of ventricular cells.</Data></Cell>
+    <Cell><Data ss:Type="String">yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">3,4</Data></Cell>
+    <Cell ss:Index="11"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell><Data ss:Type="String">HR to CO</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, CO is still down from its normal value since the RR response is not big enough to reverse the direct effect of the MI.</Data></Cell>
+    <Cell><Data ss:Type="String">no</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">3,4</Data></Cell>
+    <Cell ss:Index="11"><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell><Data ss:Type="String">CO CVP</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Right, with CO decreased there is a corresponding increase in CVP.</Data></Cell>
+    <Cell><Data ss:Type="String">yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">1,4</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell><Data ss:Type="String">CO to CVP</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, with CO decreased there is a corresponding increase in CVP.</Data></Cell>
+    <Cell><Data ss:Type="String">no</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">1,4</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell><Data ss:Type="String">CVP to SV</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Right, SV is down because of the loss of ventricular myocytes (effectively reducing IS) is greater than the increase in CVP (preload) that is present.</Data></Cell>
+    <Cell><Data ss:Type="String">yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="String">1,2</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell><Data ss:Type="String">CVP to SV</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, SV is down because of the loss of ventricular myocytes (effectively reducing IS) is greater than the increase in CVP (preload) that is present.</Data></Cell>
+    <Cell><Data ss:Type="String">no</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="String">1,2</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Right, MAP is decreased.  One way to reason about this is to observe that the fall in CO is greater than the reflex increase in Ra.  Another approach is to recognize that the baroreceptor reflex can not, in general, fully compnesate for a DR fall in MAP.</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+    <Cell><Data ss:Type="String">All</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, this would mean that the baroreceptor reflex fully compensated for the fall in MAP that occurred with the occurrence of the MI.  However, full compensation rarely occurs.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">No, this would mean that the baroreceptor reflex overshot (exceeded) the normal value.  However, the reflex never fully compensates so MAP remains decreased.</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+    <Cell><Data ss:Type="String">Any</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <TopRowVisible>38</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>51</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

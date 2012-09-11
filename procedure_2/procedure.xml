@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Anthony Nuval</Author>
+  <LastAuthor>Anthony Nuval</LastAuthor>
+  <Created>2012-09-05T16:35:52Z</Created>
+  <LastSaved>2012-09-05T16:38:26Z</LastSaved>
+  <Version>14.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11800</WindowHeight>
+  <WindowWidth>25520</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <Date1904/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="procedure.csv">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="2" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:Index="6" ss:AutoFitWidth="0" ss:Width="344"/>
+   <Row>
+    <Cell><Data ss:Type="String">Title</Data></Cell>
+    <Cell><Data ss:Type="String">Introduction</Data></Cell>
+    <Cell><Data ss:Type="String">Initial Variable</Data></Cell>
+    <Cell><Data ss:Type="String">Initial Variable Direction</Data></Cell>
+    <Cell><Data ss:Type="String">Initial Variable Summary</Data></Cell>
+    <Cell><Data ss:Type="String">Procedure Summary</Data></Cell>
+    <Cell><Data ss:Type="String">Key</Data></Cell>
+   </Row>
+   <Row ss:Height="405">
+    <Cell><Data ss:Type="String">Increase Venous Resistance (Rv) to 200% of Normal</Data></Cell>
+    <Cell><Data ss:Type="String">In this experiment we will increase venous resistance (Rv) to 200% of its normal value in a new subject.  This is accomplished  by constricting the small veins just distal to the capillaries. Only Rv is increased by this procedure.  Neither venous compliance or capacitance is affected.</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Increasing the resistance between the end of the capillaries and heart causes a drop in the down stream pressure (central venous pressure).  Thus the primary variable, the factor directly impacted by the procedure, is CVP and it is decreased.</Data></Cell>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">In this procedure we increased Rv between the end of the capillaries and the great veins around the heart WITHOUT changing venous compliance or capacitance.  This has the effect of dropping the pressure downstream from the increased resistance, the central venous pressure (CVP).  We can also say that the increased venous resistance reduced venous return without affecting cardiac output.  The result is reduced central volume and hence reduced CVP.&#13;&#13;With CVP reduced there will be reduced SV and hence reduced CO.  MAP must therefore fall.&#13;&#13;The baroreceptor reflex then generates a response (RR) that will cause MAP to increase.  It does this my increasing IS, HR, and Ra.  CO is thus increased and MAP goes up.&#13;&#13;In the final steady state (SS) MAP is still reduced as the reflex does not fully compensate for the initial (DR) fall.  All of the neutrally controlled variables are increased and CO is therefore increased.</Data></Cell>
+    <Cell><Data ss:Type="String">0,1,1,0,1,0,1,2,1,1,2,2,2,2,2,1,1,2,2,2,1</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
