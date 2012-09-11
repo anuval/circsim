@@ -55,12 +55,25 @@ SC.mixin(CoreCircsim, {
             }
 
             var procedureDirectory = procedureDirBasename + procedureNumber + "/";
+	    var procedureExists = false;
 
             directoryRequest.open("GET", procedureDirectory, false);
             directoryRequest.send();
             SC.debug("Request status code is " + directoryRequest.status);
 
-            if (directoryRequest.status == 200) {
+            if (directoryRequest.status == 403) {
+                fileRequest.open("GET", fileToRetrieve, false);
+                fileRequest.send();
+                SC.debug("Request status code of file is " + fileRequest.status);
+                if (fileRequest.status == 200) {
+                    procedureExists = true;
+                }
+	    }
+            else if (directoryRequest.status == 200) {
+                procedureExists = true;
+            }
+
+            if (procedureExists === true) {
 
                 /*
                  * Step 2: Read information from procedure.xml.
