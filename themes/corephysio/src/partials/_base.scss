@@ -1,0 +1,58 @@
+body {
+  font-family:Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+};
+
+div {
+  outline-width: 0px !important;
+};
+
+.focus {
+  outline-width: 0px !important;
+}
+
+#procedure-selection {
+  border-right: 1px solid #DCDCDC;
+}
+
+.sc-list-item-view{
+  font-size: 14px;
+}
+
+.sc-list-item-view.sel{
+  background-color: steelblue;
+  label {
+    color: #FFF;
+    font-size: 14px;
+  }
+}
+
+.sc-list-item-view label {
+  white-space:normal;
+  height: 40px;
+  top: 38%;
+  font-size: 14px;
+}
+
+#procedure-label {
+  padding: 8px;
+}
+
+#pv-summary-view {
+  color:#111;
+}
+
+#correct-pv-display {
+  font-size: 14px;
+}
+
+#next-button {
+  float: right;
+  margin-top: 7px;
+  margin-right: 9px;
+}
+
+.sc-regular-size.sc-label-view{
+  font-size: 14px;
+}

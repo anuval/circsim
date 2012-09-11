@@ -1,0 +1,88 @@
+.sc-button-view{
+  @include sc-button;
+}
+
+#top-toolbar{
+  @include sc-toolbar;
+  #logo-image, 
+  #circsim-title, 
+  #help-button {
+    position: absolute;
+  };
+  
+  #logo-image{    
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 0px;    
+  };
+  
+  #circsim-title{
+    margin-top: 4px;
+    margin-left: 12px;
+    width: 330px;
+    top: 50%;
+    height: 24px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+  };  
+
+  #help-button{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    height: 8px;
+    padding: 5px 12px 11px;
+    width: 45px;
+    text-align: right;
+    img{
+      position: absolute;
+      left: 8px;
+      top: 4px;
+    }
+  };
+
+  #schematic-button{
+    position: absolute;
+    right: 88px;
+    top: 5px;
+    height: 8px;
+    padding: 5px 12px 11px;
+    width: 78px;
+    text-align: right;
+    img{
+      position: absolute;
+      left: 8px;
+      top: 4px;
+    }
+  };
+  
+  z-index: 12000;
+};
+
+#footer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 36px;
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  color: #555;
+  border-bottom: 1px solid #999;
+  z-index: 12000;  
+  @include single-text-shadow(white, 0px, 1px, 1px);
+  @include single-box-shadow(rgba(0, 0, 0, 0.5), 0px, 0px, 4px);
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAAAAACBTI29AAAAGklEQVR4nGN6x8TA9B+OUUlUFjoPXQ2CBGIAcuYgKD9pJ2MAAAAASUVORK5CYII=");  
+  #copyright {
+    position: absolute;
+    margin-top: -9px;
+    right: 10px;
+    width: 252px;
+    top: 50%;
+    height: 18px;
+    text-align: center;    
+  };
+};
