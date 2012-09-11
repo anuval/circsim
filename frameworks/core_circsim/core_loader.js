@@ -62,6 +62,13 @@ SC.mixin(CoreCircsim, {
             SC.debug("Request status code is " + directoryRequest.status);
 
             if (directoryRequest.status == 403) {
+                var fileToRetrieve = procedureDirectory + procedureFile;
+                if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome,
+                    // Opera, Safari
+                    fileRequest = new XMLHttpRequest();
+                } else {// code for IE6, IE5
+                    fileRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                }
                 fileRequest.open("GET", fileToRetrieve, false);
                 fileRequest.send();
                 SC.debug("Request status code of file is " + fileRequest.status);
