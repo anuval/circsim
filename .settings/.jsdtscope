@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="views/sidebar/|resources/|views/content/|views/|tests/controllers/|lib/|tests/views/|controllers/|statecharts/" kind="src" path="apps/circsim"/>
+	<classpathentry kind="src" path="apps/circsim/controllers"/>
+	<classpathentry kind="src" path="apps/circsim/lib"/>
+	<classpathentry kind="src" path="apps/circsim/resources"/>
+	<classpathentry kind="src" path="apps/circsim/statecharts"/>
+	<classpathentry kind="src" path="apps/circsim/tests/controllers"/>
+	<classpathentry kind="src" path="apps/circsim/tests/views"/>
+	<classpathentry excluding="sidebar/|content/" kind="src" path="apps/circsim/views"/>
+	<classpathentry kind="src" path="apps/circsim/views/content"/>
+	<classpathentry kind="src" path="apps/circsim/views/sidebar"/>
+	<classpathentry excluding="tests/|fixtures/|models/" kind="src" path="frameworks/core_circsim"/>
+	<classpathentry kind="src" path="frameworks/core_circsim/fixtures"/>
+	<classpathentry kind="src" path="frameworks/core_circsim/models"/>
+	<classpathentry kind="src" path="frameworks/core_circsim/tests"/>
+	<classpathentry kind="src" path="frameworks/twitter_bootstrap"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.USER_LIBRARY/SproutCore"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
