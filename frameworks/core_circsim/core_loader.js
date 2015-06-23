@@ -202,6 +202,48 @@ SC.mixin(CoreCircsim, {
                         actualIndex = cell + cellOffset - 1;
                         SC.debug("cell: " + cell + ", actual index: " + actualIndex);
 
+                        if(currentCell) {
+		            if(currentCell.childNodes[0] && currentCell.childNodes[0].childNodes[0]) {
+
+                        if (0 == actualIndex) {
+                            answerKey.set('category', currentCell.childNodes[0].childNodes[0].nodeValue);
+                            SC.debug("Procedure " + procedureNumber + ", row " + row + ": category is " + answerKey.get('category'));
+                        } else if (1 == actualIndex) {
+                            answerKey.set('column', parseInt(currentCell.childNodes[0].childNodes[0].nodeValue, 10));
+                            SC.debug("Procedure " + procedureNumber + ", row " + row + ": column is " + answerKey.get('column'));
+                        } else if (2 == actualIndex) {
+                            answerKey.set('comment', currentCell.childNodes[0].childNodes[0].nodeValue);
+                            SC.debug("Procedure " + procedureNumber + ", row " + row + ": comment is " + answerKey.get('comment'));
+                        } else if (3 == actualIndex) {
+                            answerKey.set('isCorrect', currentCell.childNodes[0].childNodes[0].nodeValue);
+                            SC.debug("Procedure " + procedureNumber + ", row " + row + ": isCorrect is " + answerKey.get('isCorrect'));
+                        } else if (4 == actualIndex) {
+                            answerKey.set('match', currentCell.childNodes[0].childNodes[0].nodeValue.toUpperCase());
+                            SC.debug("Procedure " + procedureNumber + ", row " + row + ": match is " + answerKey.get('match'));
+                        } else if (5 == actualIndex) {
+                            highlightsArray = currentCell.childNodes[0].childNodes[0].nodeValue.split(',');
+                            for (i = 0; i < highlightsArray.length; ++i) {
+                                highlightsArray[i] = parseInt(highlightsArray[i], 10);
+                            }
+                            answerKey.set('highlights', highlightsArray);
+                            SC.debug("Procedure " + procedureNumber + ", row " + row + ": highlights is " + answerKey.get('highlights'));
+                        } else {
+                                procedureTableCell = cell + cellOffset - 7;
+                                cellsToCheck.push(procedureTableCell);
+                                comparisonValues.push(parseInt(currentCell.childNodes[0].childNodes[0].nodeValue, 10));
+                        }
+			    }
+			    else {
+			    	SC.debug("current cell has no child nodes");
+		            }
+
+			}
+			else {
+			    SC.debug("current cell is undefined");
+			}
+
+
+/*
                         if (0 == actualIndex) {
                             answerKey.set('category', allCellsInRow[cell].childNodes[0].childNodes[0].nodeValue);
                             SC.debug("Procedure " + procedureNumber + ", row " + row + ": category is " + answerKey.get('category'));
@@ -225,10 +267,14 @@ SC.mixin(CoreCircsim, {
                             answerKey.set('highlights', highlightsArray);
                             SC.debug("Procedure " + procedureNumber + ", row " + row + ": highlights is " + answerKey.get('highlights'));
                         } else {
-                            procedureTableCell = cell + cellOffset - 7;
-                            cellsToCheck.push(procedureTableCell);
-                            comparisonValues.push(parseInt(currentCell.childNodes[0].childNodes[0].nodeValue, 10));
+                            if(currentCell && currentCell.childNodes[0] && currentCell.childNodes[0].childNodes[0]) {
+                                procedureTableCell = cell + cellOffset - 7;
+                                cellsToCheck.push(procedureTableCell);
+                                comparisonValues.push(parseInt(currentCell.childNodes[0].childNodes[0].nodeValue, 10));
+                            }
                         }
+
+*/
                     }
 
                     answerKey.set('cells', cellsToCheck);

@@ -24,7 +24,7 @@ Circsim.mainPage = SC.Page.design({
       }), 
 
       'schematicButton': SC.ButtonView.design({
-        layout: {right: 98, top: 5, width:101, height: 24 },
+        layout: {right: 98, top: 5, width:120, height: 24 },
         icon: sc_static('images/schematic-icon'),
         title: 'Schematic',
         target: 'Circsim.statechart', 
